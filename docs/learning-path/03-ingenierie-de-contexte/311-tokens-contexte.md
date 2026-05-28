@@ -7,7 +7,7 @@ description: "Comprendre pourquoi les tokens comptent, choisir le bon modèle se
 
 # 311 — Tokens & fenêtre de contexte
 
-Durée estimée : 45 min · Complexité : ⭐⭐⭐ · Pré-requis : [Module 104](../01-fondations/104-skills.md), [Module 208](../02-composition/208-workflows.md)
+Durée estimée : 45 min · Complexité : ⭐⭐⭐ · Pré-requis : [Module 103](../01-fondations/103-skills.md), [Module 208](../02-composition/208-workflows.md)
 
 > Chaque token que tu envoies a un coût, une latence et un effet sur la qualité de la réponse. Ce module t'apprend à raisonner en tokens avant d'optimiser.
 
@@ -26,7 +26,7 @@ La sobriété LLM n'est pas une contrainte budgétaire — c'est une discipline 
 
 ## Pré-requis
 
-- [Module 104 — Skills](../01-fondations/104-skills.md) — tu dois savoir créer et déclencher un skill.
+- [Module 103 — Skills](../01-fondations/103-skills.md) — tu dois savoir créer et déclencher un skill.
 - [Module 208 — Workflows](../02-composition/208-workflows.md) — tu dois maîtriser l'orchestration par sous-agents.
 - [Module 313 — Evals](./313-evals.md) — tu dois savoir écrire et interpréter des `eval` binaires.
 - VS Code avec l'extension GitHub Copilot activée.

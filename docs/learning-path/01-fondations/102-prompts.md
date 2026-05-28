@@ -199,7 +199,7 @@ Utilise `describe` et `it`. Place le fichier de test à côté du fichier source
 
 ## Pour aller plus loin
 
-- [Module 104 — Skills](./104-skills.md) : quand un prompt ne suffit plus et qu'il faut une procédure conditionnelle avec un fichier `SKILL.md`.
+- [Module 103 — Skills](./103-skills.md) : quand un prompt ne suffit plus et qu'il faut une procédure conditionnelle avec un fichier `SKILL.md`.
 - **Skills à invocation utilisateur** : après avoir compris les skills (module 03), tu découvriras comment remplacer tes `.prompt.md` par des skills dont on désactive `model invocation` — le prompt n'existe plus comme primitive séparée, il devient un skill que seul l'utilisateur déclenche. Ce module viendra après le module Skills dans le parcours.
 - `docs/reference/prompt-anatomy.md` — page de référence à créer.
 

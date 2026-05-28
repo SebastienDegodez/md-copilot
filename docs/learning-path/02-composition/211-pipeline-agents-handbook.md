@@ -7,7 +7,7 @@ description: "Étude de cas du workflow orchestré qui rédige les modules de ce
 
 # 211 — Pipeline d'agents : comment ce handbook s'écrit
 
-Durée estimée : 60 min · Complexité : ⭐⭐ · Pré-requis : [208 — Workflows](./208-workflows.md), [103 — Agents](../01-fondations/103-agents.md), [104 — Skills](../01-fondations/104-skills.md)
+Durée estimée : 60 min · Complexité : ⭐⭐ · Pré-requis : [208 — Workflows](./208-workflows.md), [104 — Agents](../01-fondations/104-agents.md), [103 — Skills](../01-fondations/103-skills.md)
 
 > Le module 208 t'a montré le pattern *orchestrateur → sous-agents* en théorie. Ce chapitre te montre ce même pattern **vivant**, sur le pipeline qui a écrit la page que tu es en train de lire.
 
@@ -302,7 +302,7 @@ Tu peux passer au module suivant si :
 ## Pour aller plus loin
 
 - [208 — Workflows](./208-workflows.md) — le module conceptuel dont celui-ci est l'incarnation. Relis-le après avoir vu le pipeline en action ; les patterns prennent un autre relief.
-- [103 — Agents](../01-fondations/103-agents.md) et [104 — Skills](../01-fondations/104-skills.md) — la base sur laquelle reposent les sous-agents et leurs procédures.
+- [104 — Agents](../01-fondations/104-agents.md) et [103 — Skills](../01-fondations/103-skills.md) — la base sur laquelle reposent les sous-agents et leurs procédures.
 - Inspecte les quatre fichiers du quartet sous `.github/agents/handbook-chapter-*.agent.md`. C'est la spec exécutable du pipeline ; tout ce que ce chapitre décrit y est codifié.
 - Lis le design packet `.spec-handbook-copilot/2026-05-27-initial-design/plan.md` pour comprendre *pourquoi* l'orchestrateur a été extrait et pas fusionné dans un super-agent — c'est l'application explicite de la méthodologie Genesis.
 

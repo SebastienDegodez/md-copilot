@@ -27,8 +27,8 @@ Un `workflow` résout ce problème en orchestrant plusieurs primitives dans une 
 
 ## Pré-requis
 
-- [Module 104 — Skills](../01-fondations/104-skills.md)
-- [Module 103 — Agents personnalisés](../01-fondations/103-agents.md)
+- [Module 103 — Skills](../01-fondations/103-skills.md)
+- [Module 104 — Agents personnalisés](../01-fondations/104-agents.md)
 - VS Code avec l'extension GitHub Copilot activée.
 - Un dépôt Git avec au moins une issue ouverte sur GitHub.
 

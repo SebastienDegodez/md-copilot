@@ -1,11 +1,11 @@
 ---
 id: agents-personnalises
-title: "103 — Agents (.agent.md)"
-sidebar_position: 103
+title: "104 — Agents (.agent.md)"
+sidebar_position: 104
 description: "Packager un rôle réutilisable dans un fichier .agent.md avec identité, outils et modèle dédiés."
 ---
 
-# 103 — Agents (`.agent.md`)
+# 104 — Agents (`.agent.md`)
 
 Durée estimée : 60 min
 
@@ -29,7 +29,7 @@ C'est exactement ce que résout un fichier `.agent.md`. Il définit un **mode de
 
 ## Pré-requis
 
-- [Module 104 — Skills](./104-skills.md)
+- [Module 103 — Skills](./103-skills.md)
 - VS Code avec l'extension GitHub Copilot activée.
 - Un dépôt Git avec au moins un fichier source.
 

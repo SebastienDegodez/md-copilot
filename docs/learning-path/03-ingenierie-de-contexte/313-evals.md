@@ -7,7 +7,7 @@ description: "Industrialiser le test de tes skills et agents avec des assertions
 
 # 313 — Tester ses primitives (evals binaires)
 
-Durée estimée : 60 min · Complexité : ⭐⭐⭐ · Pré-requis : [Module 104 — Skills](../01-fondations/104-skills.md)
+Durée estimée : 60 min · Complexité : ⭐⭐⭐ · Pré-requis : [Module 103 — Skills](../01-fondations/103-skills.md)
 
 > Tu sais créer un `skill`. Mais comment prouver qu'il fonctionne — et qu'il continue de fonctionner après chaque modification ?
 
@@ -26,7 +26,7 @@ Les `eval` binaires résolvent ce problème. Une eval est une assertion booléen
 
 ## Pré-requis
 
-- [Module 104 — Skills](../01-fondations/104-skills.md) — tu dois savoir créer et déclencher un skill.
+- [Module 103 — Skills](../01-fondations/103-skills.md) — tu dois savoir créer et déclencher un skill.
 - Un dépôt Git contenant au moins un skill fonctionnel (par exemple `writing-commit-message` créé au module 03).
 - VS Code avec l'extension GitHub Copilot activée.
 
@@ -293,9 +293,9 @@ Tu peux passer au module suivant si :
 
 ## Pour aller plus loin
 
-- [Module 104 — Skills](../01-fondations/104-skills.md) : revoir la construction du skill `writing-commit-message` si tes evals révèlent des faiblesses dans la procédure.
+- [Module 103 — Skills](../01-fondations/103-skills.md) : revoir la construction du skill `writing-commit-message` si tes evals révèlent des faiblesses dans la procédure.
 - [Module 313 — Evals avancées](./313-evals.md) : passer des assertions binaires aux évaluations par LLM-juge et aux métriques de qualité graduées.
-- [Module 103 — Agents personnalisés](../01-fondations/103-agents.md) : appliquer la même méthode d'evals à un fichier `.agent.md`.
+- [Module 104 — Agents personnalisés](../01-fondations/104-agents.md) : appliquer la même méthode d'evals à un fichier `.agent.md`.
 - `docs/reference/eval-anatomy.md` — page de référence à créer.
 
 ## Module suivant

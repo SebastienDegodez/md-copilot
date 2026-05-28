@@ -28,7 +28,7 @@ Cette approche s'appelle *autoresearch*, inspirée de la méthodologie d'Andrej 
 
 ## Pré-requis
 
-- [Module 104 — Skills](../01-fondations/104-skills.md) — tu dois savoir créer un `SKILL.md` avec une description de déclenchement et une procédure.
+- [Module 103 — Skills](../01-fondations/103-skills.md) — tu dois savoir créer un `SKILL.md` avec une description de déclenchement et une procédure.
 - [Module 106 — MCP](../01-fondations/106-mcp.md) — tu dois comprendre comment Copilot interagit avec des outils et des sources de données.
 - VS Code avec l'extension GitHub Copilot activée.
 - Un dépôt Git contenant au moins un skill existant à améliorer.

@@ -1,11 +1,11 @@
 ---
 id: skills
-title: "104 — Skills — savoir-faire procéduraux"
-sidebar_position: 104
+title: "103 — Skills — savoir-faire procéduraux"
+sidebar_position: 103
 description: "Créer un SKILL.md pour que Copilot déclenche une procédure uniquement quand le contexte l'exige."
 ---
 
-# 104 — Skills — savoir-faire procéduraux
+# 103 — Skills — savoir-faire procéduraux
 
 Durée estimée : 90 min · Complexité : intermédiaire · Pré-requis : [Module 101 — Instructions personnalisées](./101-instructions.md)
 
@@ -250,10 +250,10 @@ Tu peux passer au module suivant si :
 
 ## Pour aller plus loin
 
-- [Module 103 — Agents personnalisés](./103-agents.md) : quand un skill ne suffit plus et qu'il faut packager un rôle complet avec identité et outils restreints.
+- [Module 104 — Agents personnalisés](./104-agents.md) : quand un skill ne suffit plus et qu'il faut packager un rôle complet avec identité et outils restreints.
 - [Module 313 — Tester ses primitives](../03-ingenierie-de-contexte/313-evals.md) : mesurer objectivement si un skill se déclenche au bon moment avec des `eval` binaires.
 - `docs/reference/skill-anatomy.md` — page de référence à créer.
 
 ## Module suivant
 
-**Suivant** : [103 — Agents](./103-agents.md)
+**Suivant** : [104 — Agents](./104-agents.md)

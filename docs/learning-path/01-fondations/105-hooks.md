@@ -7,7 +7,7 @@ description: "Configurer des hooks Copilot pour déclencher des actions automati
 
 # 105 — Hooks — automatismes événementiels
 
-**Durée** : 30 min · **Complexité** : ⭐⭐ · **Pré-requis** : [Module 104 — Skills](./104-skills.md)
+**Durée** : 30 min · **Complexité** : ⭐⭐ · **Pré-requis** : [Module 103 — Skills](./103-skills.md)
 
 > Un *skill* se déclenche quand tu le demandes. Un *hook* se déclenche quand un *événement* se produit — sans que tu aies à y penser.
 
@@ -24,7 +24,7 @@ Un `hook` résout ce problème. C'est une commande ou un script que Copilot exé
 
 ## Pré-requis
 
-- [Module 104 — Skills](./104-skills.md)
+- [Module 103 — Skills](./103-skills.md)
 - VS Code avec l'extension GitHub Copilot activée.
 - Un dépôt Git avec au moins un fichier source.
 
@@ -249,7 +249,7 @@ Tu peux passer au module suivant si :
 
 ## Pour aller plus loin
 
-- [Module 104 — Skills](./104-skills.md) : les skills s'activent sur demande — les hooks s'activent sur événement. Les deux sont complémentaires.
+- [Module 103 — Skills](./103-skills.md) : les skills s'activent sur demande — les hooks s'activent sur événement. Les deux sont complémentaires.
 - [Module 209 — Plugins](../02-composition/209-plugins.md) : les plugins peuvent embarquer des hooks pré-configurés pour une équipe.
 - [Module 208 — Workflows](../02-composition/208-workflows.md) : combiner hooks + skills + agents dans un flux orchestré.
 - [Module 313 — Tester ses primitives](../03-ingenierie-de-contexte/313-evals.md) : tester qu'un hook se déclenche correctement avec des evals binaires.

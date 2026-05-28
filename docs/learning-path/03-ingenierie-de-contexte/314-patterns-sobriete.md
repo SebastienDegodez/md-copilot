@@ -30,7 +30,7 @@ Ce module t'apprend à transformer tes principes de design en leviers concrets d
 ## Pré-requis
 
 - [Module 311 — Tokens & fenêtre de contexte](./311-tokens-contexte.md) — tu dois comprendre pourquoi les tokens comptent.
-- [Module 104 — Skills](../01-fondations/104-skills.md) — tu dois savoir créer et déclencher un skill.
+- [Module 103 — Skills](../01-fondations/103-skills.md) — tu dois savoir créer et déclencher un skill.
 - [Module 313 — Evals](./313-evals.md) — tu dois savoir écrire des `eval` binaires pour mesurer le delta.
 - Un dépôt Git contenant du code applicatif (au moins 3 fichiers de plus de 100 lignes).
 

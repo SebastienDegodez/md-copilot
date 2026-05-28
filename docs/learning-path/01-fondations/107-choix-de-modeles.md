@@ -7,7 +7,7 @@ description: "Comment choisir entre GPT-4.1, Claude, Gemini dans GitHub Copilot 
 
 # 107 — Choix de modèles
 
-**Durée** : ~40 min · **Complexité** : ⭐⭐ · **Pré-requis** : [100 — Setup & posture](./100-setup-posture.md), [103 — Agents](./103-agents.md)
+**Durée** : ~40 min · **Complexité** : ⭐⭐ · **Pré-requis** : [100 — Setup & posture](./100-setup-posture.md), [104 — Agents](./104-agents.md)
 
 > *Copilot ne se limite plus à un seul modèle. Savoir lequel choisir pour chaque tâche, c'est le premier levier d'optimisation que tu peux actionner sans écrire une seule ligne de code.*
 
@@ -170,7 +170,7 @@ Par défaut, VS Code active le raisonnement adaptatif : le modèle détermine lu
 
 ### Forcer un modèle dans un agent
 
-Tu as vu dans le [module 103](./103-agents.md) que le frontmatter `.agent.md` accepte une clé `model` optionnelle. C'est le mécanisme pour associer un modèle spécifique à un rôle.
+Tu as vu dans le [module 104](./104-agents.md) que le frontmatter `.agent.md` accepte une clé `model` optionnelle. C'est le mécanisme pour associer un modèle spécifique à un rôle.
 
 Prenons un agent de triage qui doit être rapide et peu coûteux :
 
@@ -200,7 +200,7 @@ Et un agent architecte qui a besoin de raisonnement profond :
   ---
 ```
 
-> Source: docs/learning-path/01-fondations/103-agents.md
+> Source: docs/learning-path/01-fondations/104-agents.md
 > Citation: "Spécifier un modèle est utile quand le rôle de l'agent exige un modèle particulier"
 > Fetched: 2026-05-28
 
@@ -346,4 +346,4 @@ Tu peux passer au module suivant si :
 2. https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-chat-model
 3. https://docs.github.com/en/copilot/reference/ai-models/model-comparison
 4. https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing
-5. docs/learning-path/01-fondations/103-agents.md
+5. docs/learning-path/01-fondations/104-agents.md

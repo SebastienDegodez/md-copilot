@@ -26,6 +26,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Fetch shared nav from central site
+        run: |
+          mkdir -p _data
+          curl -sSf https://raw.githubusercontent.com/SebastienDegodez/SebastienDegodez.github.io/main/_data/nav.yml -o _data/nav.yml
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/jekyll-build-pages@v1

@@ -116,6 +116,6 @@ Tu peux passer au module suivant si :
 
 - [Customizing GitHub Copilot — repository instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot) — référence officielle GitHub Docs.
 - [Customize chat responses in VS Code](https://code.visualstudio.com/docs/copilot/copilot-customization) — instructions et `applyTo` côté Microsoft.
-- [Glossaire — instruction, prompt](../ressources/glossaire-fr.md) — rappels de définitions courtes.
+- [Glossaire — instruction, prompt](../../ressources/glossaire-fr.md) — rappels de définitions courtes.
 
 **Suivant** : [102 — Prompts personnalisés](./102-prompts.md)

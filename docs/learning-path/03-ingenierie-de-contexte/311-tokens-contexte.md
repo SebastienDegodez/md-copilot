@@ -36,7 +36,7 @@ La sobriété LLM n'est pas une contrainte budgétaire — c'est une discipline 
 
 ### 1 Pourquoi les tokens comptent
 
-Un token n'est pas un caractère. C'est l'unité atomique que le modèle traite — en moyenne 3 à 4 caractères en anglais, souvent moins en français. Chaque token envoyé a quatre conséquences :
+Un token n'est pas un caractère. C'est l'unité atomique que le modèle traite — en moyenne 3 à 4 caractères en anglais, souvent moins en français (le français consomme donc plus de tokens à contenu égal). Chaque token envoyé a quatre conséquences :
 
 - **Coût direct** — les modèles facturent à l'entrée et à la sortie, par million de tokens. Un skill de 800 tokens chargé dans chaque conversation coûte à chaque échange, pas une seule fois.
 - **Latence** — plus le prompt est long, plus le temps de réponse augmente. Sur une complétion inline, 200 ms de latence supplémentaire suffisent à casser le flow de développement.

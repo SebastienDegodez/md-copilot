@@ -36,7 +36,7 @@ La sobriété LLM n'est pas une contrainte budgétaire — c'est une discipline 
 
 ### 1 Pourquoi les tokens comptent
 
-Un token n'est pas un caractère. C'est l'unité atomique que le modèle traite — en moyenne 3 à 4 caractères en anglais, souvent moins en français (le français consomme donc plus de tokens à contenu égal). Chaque token envoyé a quatre conséquences :
+Un token n'est pas un caractère. C'est l'unité atomique que le modèle traite — en moyenne 3 à 4 caractères en anglais, souvent moins en français (le français consomme donc [~1.3× plus de tokens à contenu égal](https://blog.yenniejun.com/p/all-languages-are-not-created-tokenized)). Chaque token envoyé a quatre conséquences :
 
 - **Coût direct** — les modèles facturent à l'entrée et à la sortie, par million de tokens. Un skill de 800 tokens chargé dans chaque conversation coûte à chaque échange, pas une seule fois.
 - **Latence** — plus le prompt est long, plus le temps de réponse augmente. Sur une complétion inline, 200 ms de latence supplémentaire suffisent à casser le flow de développement.
@@ -191,3 +191,6 @@ Tu as réussi ce module si :
 
 - GitHub Blog — articles sur l'efficience des tokens dans Copilot (source d'inspiration).
 - Documentation des fournisseurs de modèles — tailles de fenêtre de contexte et tarification par million de tokens.
+- OpenAI — [Tokenizer](https://platform.openai.com/tokenizer) — outil interactif pour visualiser le découpage en tokens par langue.
+- OpenAI Cookbook — [How to count tokens with tiktoken](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken) — documente la règle « 1 token ≈ 4 caractères en anglais ».
+- Yennie Jun (2023) — [All languages are NOT created (tokenized) equal](https://blog.yenniejun.com/p/all-languages-are-not-created-tokenized) — analyse comparative montrant que le français nécessite ~1.3× plus de tokens que l'anglais à contenu sémantique égal.

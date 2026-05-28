@@ -21,6 +21,8 @@ title: "GitHub Copilot — Learning Path"
     line-height: 1.1;
   }
   .landing-hero h1 span { color: var(--color-highlight); }
+  .landing-hero h1 a { color: inherit; text-decoration: none; }
+  .landing-hero h1 a:hover { opacity: 0.8; }
   .landing-hero p {
     font-size: 1.1rem;
     color: var(--color-dimmed);

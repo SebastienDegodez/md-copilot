@@ -1,7 +1,7 @@
 title: "GitHub Copilot — Learning Path"
 description: "Guide francophone pour maîtriser GitHub Copilot"
 url: "https://SebastienDegodez.github.io"
-baseurl: "/md-copilot"
+baseurl: "/learning-path-copilot"
 markdown: kramdown
 highlighter: rouge
 

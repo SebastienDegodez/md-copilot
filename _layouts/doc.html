@@ -17,6 +17,33 @@ layout: default
   }
 
   /* ============================================================
+     SCROLLBAR — thin & translucent, matches glass theme
+     ============================================================ */
+  .doc-sidebar,
+  .doc-content pre {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 229, 177, 0.2) transparent;
+  }
+  .doc-sidebar::-webkit-scrollbar,
+  .doc-content pre::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .doc-sidebar::-webkit-scrollbar-track,
+  .doc-content pre::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .doc-sidebar::-webkit-scrollbar-thumb,
+  .doc-content pre::-webkit-scrollbar-thumb {
+    background: rgba(139, 229, 177, 0.2);
+    border-radius: 3px;
+  }
+  .doc-sidebar::-webkit-scrollbar-thumb:hover,
+  .doc-content pre::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 229, 177, 0.35);
+  }
+
+  /* ============================================================
      SIDEBAR
      ============================================================ */
   .doc-sidebar {

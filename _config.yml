@@ -1,0 +1,33 @@
+title: "GitHub Copilot — Learning Path"
+description: "Guide francophone pour maîtriser GitHub Copilot"
+url: "https://SebastienDegodez.github.io"
+baseurl: "/md-copilot"
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+exclude:
+  - apm.yml
+  - apm.lock.yaml
+  - apm_modules
+  - evals
+  - docs/specs
+  - docs/plans
+  - docs/_drafts
+  - docs/ressources
+  - "**/_category.json"
+  - .spec-handbook-copilot
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .github
+
+defaults:
+  - scope:
+      path: "docs/learning-path"
+      type: "pages"
+    values:
+      layout: "doc"

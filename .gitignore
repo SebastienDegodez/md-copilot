@@ -2,8 +2,9 @@
 # APM dependencies
 apm_modules/
 
-# Docusaurus
-node_modules/
-build/
-.docusaurus/
-.cache-loader/
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+.sass-cache/

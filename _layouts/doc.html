@@ -1,0 +1,392 @@
+---
+layout: default
+---
+<style>
+  /* ============================================================
+     DOC LAYOUT — sidebar + content
+     ============================================================ */
+  .doc-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: calc(100vh - 3.5rem);
+  }
+  @media (max-width: 900px) {
+    .doc-layout { grid-template-columns: 1fr; }
+    .doc-sidebar { display: none; }
+    .doc-sidebar.open { display: block; }
+  }
+
+  /* ============================================================
+     SIDEBAR
+     ============================================================ */
+  .doc-sidebar {
+    position: sticky;
+    top: 3.5rem;
+    height: calc(100vh - 3.5rem);
+    overflow-y: auto;
+    padding: 1.5rem 1rem;
+    border-right: 1px solid var(--glass-border);
+    background: var(--glass-bg-strong);
+  }
+  .doc-sidebar h3 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-highlight);
+    margin: 1.5rem 0 0.5rem 0.5rem;
+  }
+  .doc-sidebar h3:first-child { margin-top: 0; }
+  .doc-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .doc-sidebar li a {
+    display: block;
+    padding: 0.35em 0.75em;
+    font-size: 0.85rem;
+    color: var(--color-dimmed);
+    border-radius: var(--radius);
+    border-left: 2px solid transparent;
+    transition: color var(--motion-fast), background var(--motion-fast), border-color var(--motion-fast);
+  }
+  .doc-sidebar li a:hover {
+    color: var(--color-foreground);
+    background: rgba(139, 229, 177, 0.08);
+    text-decoration: none;
+    opacity: 1;
+  }
+  .doc-sidebar li a.active {
+    color: var(--color-highlight);
+    background: rgba(139, 229, 177, 0.12);
+    border-left-color: var(--color-highlight);
+    font-weight: 700;
+  }
+
+  /* Mobile sidebar toggle */
+  .sidebar-toggle {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 200;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--glass-border-strong);
+    background: var(--glass-bg-strong);
+    color: var(--color-highlight);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+  }
+  @media (max-width: 900px) {
+    .sidebar-toggle { display: flex; align-items: center; justify-content: center; }
+    .doc-sidebar.open {
+      position: fixed;
+      top: 3.5rem;
+      left: 0;
+      width: 300px;
+      z-index: 150;
+      box-shadow: var(--glass-shadow-hover);
+    }
+  }
+
+  /* ============================================================
+     DOC CONTENT
+     ============================================================ */
+  .doc-content {
+    max-width: 820px;
+    padding: 2.5rem 3rem 5rem;
+  }
+  @media (max-width: 900px) {
+    .doc-content { padding: 2rem 1.5rem 4rem; }
+  }
+
+  .doc-content h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-foreground);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+  }
+  .doc-content h2 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--color-foreground);
+    margin: 2.5rem 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--color-stripe);
+  }
+  .doc-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-highlight);
+    margin: 2rem 0 0.5rem;
+  }
+  .doc-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-dimmed);
+    margin: 1.5rem 0 0.4rem;
+  }
+  .doc-content p {
+    margin-bottom: 1rem;
+    color: var(--color-foreground);
+  }
+  .doc-content ul, .doc-content ol {
+    margin: 0.5rem 0 1.25rem 1.5rem;
+    color: var(--color-foreground);
+  }
+  .doc-content li { margin-bottom: 0.3rem; }
+  .doc-content li::marker { color: var(--color-highlight); }
+
+  .doc-content blockquote {
+    margin: 1.25rem 0;
+    padding: 0.75rem 1.25rem;
+    border-left: 3px solid var(--color-highlight);
+    background: rgba(139, 229, 177, 0.06);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    color: var(--color-dimmed);
+    font-style: italic;
+  }
+  .doc-content blockquote p { margin-bottom: 0; color: var(--color-dimmed); }
+
+  .doc-content strong { color: var(--color-foreground); }
+  .doc-content em { color: var(--color-dimmed); }
+
+  .doc-content hr {
+    border: none;
+    border-top: 1px solid var(--color-stripe);
+    margin: 2rem 0;
+  }
+
+  .doc-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.9rem;
+  }
+  .doc-content th {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    font-weight: 700;
+    color: var(--color-highlight);
+    border-bottom: 2px solid var(--glass-border-strong);
+    background: rgba(139, 229, 177, 0.06);
+  }
+  .doc-content td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--color-foreground);
+  }
+  .doc-content tr:hover td {
+    background: rgba(139, 229, 177, 0.04);
+  }
+
+  /* ============================================================
+     CODE BLOCKS
+     ============================================================ */
+  .doc-content code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: rgba(139, 229, 177, 0.1);
+    color: var(--color-highlight);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+  }
+  .doc-content pre {
+    margin: 1.25rem 0;
+    padding: 1.25rem 1.5rem;
+    background: rgba(10, 20, 18, 0.95);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-card);
+    overflow-x: auto;
+    line-height: 1.5;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  .doc-content pre code {
+    background: none;
+    padding: 0;
+    color: var(--color-foreground);
+    font-size: 0.85rem;
+  }
+
+  /* Diff highlighting */
+  .doc-content pre code .gd,
+  .highlight .gd { color: #f97583; background: rgba(255, 85, 85, 0.12); display: inline-block; width: 100%; }
+  .doc-content pre code .gi,
+  .highlight .gi { color: #85e89d; background: rgba(85, 255, 85, 0.1); display: inline-block; width: 100%; }
+
+  /* Rouge syntax highlighting */
+  .highlight .k, .highlight .kd, .highlight .kn, .highlight .kp,
+  .highlight .kr, .highlight .kt { color: #ff7b72; }
+  .highlight .s, .highlight .s1, .highlight .s2, .highlight .se { color: #a5d6ff; }
+  .highlight .c, .highlight .c1, .highlight .cm, .highlight .cp { color: #8b949e; font-style: italic; }
+  .highlight .na, .highlight .nb { color: #79c0ff; }
+  .highlight .nf, .highlight .nx { color: #d2a8ff; }
+  .highlight .nn, .highlight .nc { color: #ffa657; }
+  .highlight .mi, .highlight .mf, .highlight .mh { color: #79c0ff; }
+  .highlight .o, .highlight .p { color: var(--color-foreground); }
+  .highlight .nt { color: #7ee787; }
+  .highlight .err { color: #f97583; }
+
+  /* ============================================================
+     MERMAID
+     ============================================================ */
+  .mermaid {
+    margin: 1.5rem 0;
+    text-align: center;
+    background: transparent;
+  }
+  .mermaid svg { max-width: 100%; }
+
+  /* ============================================================
+     NAV PREV/NEXT
+     ============================================================ */
+  .doc-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-stripe);
+  }
+  .doc-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    color: var(--color-dimmed);
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: border-color var(--motion-fast), color var(--motion-fast), background var(--motion-fast);
+  }
+  .doc-nav a:hover {
+    border-color: var(--color-highlight);
+    color: var(--color-highlight);
+    background: rgba(139, 229, 177, 0.08);
+    text-decoration: none;
+    opacity: 1;
+  }
+
+  /* ============================================================
+     META BAR (durée, complexité, pré-requis)
+     ============================================================ */
+  .doc-meta {
+    font-size: 0.85rem;
+    color: var(--color-dimmed);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-stripe);
+  }
+</style>
+
+{% assign all_docs = site.pages
+   | where_exp: "p", "p.path contains 'docs/learning-path/'"
+   | where_exp: "p", "p.name != '_category.json'"
+   | sort: "sidebar_position" %}
+
+{% assign bloc1 = all_docs | where_exp: "p", "p.path contains '01-fondations'" %}
+{% assign bloc2 = all_docs | where_exp: "p", "p.path contains '02-composition'" %}
+{% assign bloc3 = all_docs | where_exp: "p", "p.path contains '03-ingenierie-de-contexte'" %}
+
+<div class="doc-layout">
+  <aside class="doc-sidebar" id="sidebar">
+    <h3><i class="fa-solid fa-cube" aria-hidden="true"></i> Fondations</h3>
+    <ul>
+      {% for doc in bloc1 %}
+      <li><a href="{{ doc.url | relative_url }}"{% if page.url == doc.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <h3><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Composition</h3>
+    <ul>
+      {% for doc in bloc2 %}
+      <li><a href="{{ doc.url | relative_url }}"{% if page.url == doc.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <h3><i class="fa-solid fa-brain" aria-hidden="true"></i> Ingénierie de contexte</h3>
+    <ul>
+      {% for doc in bloc3 %}
+      <li><a href="{{ doc.url | relative_url }}"{% if page.url == doc.url %} class="active"{% endif %}>{{ doc.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+  <main class="doc-content">
+    {{ content }}
+
+    {% comment %} Prev/Next navigation {% endcomment %}
+    {% assign current_idx = nil %}
+    {% for doc in all_docs %}
+      {% if doc.url == page.url %}
+        {% assign current_idx = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+
+    {% if current_idx %}
+    <nav class="doc-nav" aria-label="Pagination">
+      {% assign prev_idx = current_idx | minus: 1 %}
+      {% assign next_idx = current_idx | plus: 1 %}
+      {% if prev_idx >= 0 %}
+        {% assign prev = all_docs[prev_idx] %}
+        <a href="{{ prev.url | relative_url }}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> {{ prev.title }}</a>
+      {% else %}
+        <span></span>
+      {% endif %}
+      {% if next_idx < all_docs.size %}
+        {% assign next_doc = all_docs[next_idx] %}
+        <a href="{{ next_doc.url | relative_url }}">{{ next_doc.title }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      {% endif %}
+    </nav>
+    {% endif %}
+  </main>
+</div>
+
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+  <i class="fa-solid fa-bars"></i>
+</button>
+
+<!-- Mermaid.js -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'dark',
+    themeVariables: {
+      primaryColor: '#1a3a2a',
+      primaryBorderColor: '#4ed58a',
+      primaryTextColor: '#e9f7ef',
+      lineColor: '#8be5b1',
+      secondaryColor: '#0e1618',
+      tertiaryColor: '#1a3a2a',
+      fontFamily: 'Lato, sans-serif'
+    }
+  });
+
+  // Convert ```mermaid code blocks to rendered diagrams
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('pre > code.language-mermaid').forEach((block, i) => {
+      const pre = block.parentElement;
+      const div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = block.textContent;
+      pre.replaceWith(div);
+    });
+    mermaid.run();
+
+    // Sidebar toggle
+    const toggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    if (toggle && sidebar) {
+      toggle.addEventListener('click', () => sidebar.classList.toggle('open'));
+    }
+  });
+</script>
